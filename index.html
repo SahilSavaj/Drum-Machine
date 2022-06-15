@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Machine</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function AudioPlay(x){
+            document.getElementById(x).play()
+            let text=document.getElementById(x).src.slice(41,42)
+            document.getElementById('display').innerText=text
+        };
+        window.document.onkeypress=function(event){
+            let k=event.key
+            if(k==="Q" || k==="q"){
+                AudioPlay('Q')
+            }
+            if(k== "A" || k=="a"){
+                AudioPlay("A")
+            }
+            if(k==="z" || k==="Z"){
+                AudioPlay('Z')
+            }
+            if(k==="w" || k==="W"){
+                AudioPlay('W')
+            }
+            if(k==="s" || k==="S"){
+                AudioPlay('S')
+            }
+            if(k==="x" || k==="X"){
+                AudioPlay('X')
+            }
+            if(k==="e" || k==="E"){
+                AudioPlay('E')
+            }
+            if(k==="d" || k==="D"){
+                AudioPlay('D')
+            }
+            if(k==="c" || k==="C"){
+                AudioPlay('C')
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Drum Machine</h1>
+    </header>
+    <div class="container" id="drum-machine">
+    <div class="row">
+
+        <div class="column">
+            <div class="drum-pad" id="Q_but" onclick="AudioPlay('Q')">
+                <h3>Q</h3>
+                <audio id="Q" class="clip" src="./audio/Q.mp3">
+            </div>
+            <div class="drum-pad" id="A_but" onclick="AudioPlay('A')">
+                <h3>A</h3>
+                <audio id="A" class="clip" src="./audio/A.mp3">
+            </div>
+            <div class="drum-pad" id="Z_but" onclick="AudioPlay('Z')">
+                <h3>Z</h3>
+                <audio id="Z" class="clip" src="./audio/Z.mp3">
+            </div>
+        </div>
+        <div class="column">
+            <div class="drum-pad" id="W_but" onclick="AudioPlay('W')">
+                <h3>W</h3>
+                <audio id="W" class="clip" src="./audio/W.mp3">
+            </div>
+            <div class="drum-pad" id="S_but" onclick="AudioPlay('S')">
+                <h3>S</h3>
+                <audio id="S" class="clip" src="./audio/S.mp3">
+            </div>
+            <div class="drum-pad" id="X_but" onclick="AudioPlay('X')">
+                <h3>X</h3>
+                <audio id="X" class="clip" src="./audio/X.mp3">
+            </div>
+        </div>
+        <div class="column">
+            <div class="drum-pad" id="E_but" onclick="AudioPlay('E')">
+                <h3>E</h3>
+                <audio id="E" class="clip" src="./audio/E.mp3" >
+    
+            </div>
+            <div class="drum-pad" id="D_but" onclick="AudioPlay('D')">
+                <h3>D</h3>
+                <audio id="D" class="clip" src="./audio/D.mp3" >
+    
+            </div>
+            <div class="drum-pad" id="C_but" onclick="AudioPlay('C')">
+                <h3>C</h3>
+                <audio id="C" class="clip" src="./audio/C.mp3" >
+    
+            </div>
+        </div>
+            
+        
+        <div class="column2">
+            <div id="display">
+                This is display
+        </div>
+    </div>
+    </div>
+    
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
