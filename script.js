@@ -5,7 +5,7 @@ function Play(id){
     let name=temp.slice(71,len-4)
     if(audio.paused){
         audio.play();
-        document.getElementById('display').innerHTML=name
+        document.getElementById('display').innerText=name
     }
     else{
         audio.pause();
