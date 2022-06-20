@@ -1,11 +1,12 @@
 function Play(id){
     let audio=document.getElementById(id);
-    let temp=audio['src']
+    let temp=audio['src'].split("/")
     let len=temp.length
-    let name=temp.slice(71,len-4)
+    let name=temp[len-1].split(".")
+    console.log(name[0])
     if(audio.paused){
         audio.play();
-        document.getElementById('display').innerText=name
+        window.document.getElementById('display').innerText=name[0]
     }
     else{
         audio.pause();
