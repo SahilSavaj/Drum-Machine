@@ -69,7 +69,7 @@ export default function Drumpad(){
     <>
         <div className="container flex flex-col dark:border w-fit dark:border-zinc-50/30 rounded-lg">
             <Display data={pressedkey}/>
-            <div className="drum_pad felx flex-col justify-center w-fit h-fit py-7 px-3 mx-auto dark:bg-zinc-50/10 
+            <div className="drum_pad felx flex-col justify-center w-fit h-fit min-h-full overflow-auto py-7 px-3 mx-auto dark:bg-zinc-50/10 
                 space-y-5">
                 <div className="pad_rows flex flex-row h-fit justify-center align-middle items-center text-center">
                     <button className="drum-pad dark:bg-zinc-900 dark:backdrop-blur-xl dark:text-zinc-300 focus:outline-none border rounded-xl 
