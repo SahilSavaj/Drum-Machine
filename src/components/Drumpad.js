@@ -53,7 +53,7 @@ export default function Drumpad(){
       }, []);
 
     const HandleInput=(e)=>{
-        const {id , value} = e.target;
+        const {value} = e.target;
         let audio=new Audio(filenames[value]);
         if(audio.paused){
             audio.play();
